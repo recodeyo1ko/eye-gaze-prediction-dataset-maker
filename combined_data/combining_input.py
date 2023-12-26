@@ -73,9 +73,9 @@ def combine_csv(count, trimmed_row_path, combined_data_csv_path):
 
 
 def main():
-    case = input("input case number; 0:nomal, 1:without_info, 2:with_info  ;")
+    case = input("input case number; 0:normal, 1:without_info, 2:with_info  ;")
     if case == '0':
-        case = 'nomal'
+        case = 'normal'
     elif case == '1':
         case = 'without_info'
     elif case == '2':
