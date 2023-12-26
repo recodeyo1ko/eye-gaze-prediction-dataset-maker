@@ -152,9 +152,9 @@ def trim_and_save_coord_as_csvfile(original_coord, trimmed_coord_save_path, star
 
 
 def main():
-    case = input("input case number; 0:nomal, 1:without_info, 2:with_info  ;")
+    case = input("input case number; 0:normal, 1:without_info, 2:with_info  ;")
     if case == '0':
-        case = 'nomal'
+        case = 'normal'
     elif case == '1':
         case = 'without_info'
     elif case == '2':
@@ -166,8 +166,8 @@ def main():
 
     # トリミングする始点・終点の指定(s)
     fps = 25
-    start_frame = fps * 46
-    stop_frame  = fps * 54
+    start_frame = fps * 186
+    stop_frame  = start_frame + fps * 8
 
     row_mp4_path, row_json_path = load_row_data(case, movie_number)
     trimmed_video_mp4file_path, trimmed_coord_csvfile_path = create_trimmed_data(case, movie_number)
