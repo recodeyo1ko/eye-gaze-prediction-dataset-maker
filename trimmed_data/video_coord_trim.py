@@ -12,7 +12,6 @@ def load_row_data(case, movie_number):
     row_json_path = os.path.join(current_dir_path,"row_data", case, movie_number, "livedata.json")
     
     if not os.path.isfile(row_mp4_path) or not os.path.isfile(row_json_path) :
-        print(row_json_path)
         print('The file does not exist. Prease check path')
         sys.exit()
 
@@ -21,14 +20,14 @@ def load_row_data(case, movie_number):
 def create_trimmed_data(case, movie_number):
     current_dir= os.getcwd()
     current_dir_path = os.path.dirname(current_dir)
-    dir_path = os.path.join(current_dir_path, "trimmed_data/trimmed_row", case, movie_number)
+    dir_path = os.path.join(current_dir_path, "trimmed_data", case, movie_number)
 
     if not os.path.exists(dir_path):
         os.makedirs(dir_path)
 
     # 処理後の保存先パスを指定
-    trimmed_video_mp4file_path = os.path.join(current_dir_path, "trimmed_data/trimmed_row", case, movie_number, "fullstream.mp4")
-    trimmed_coord_csvfile_path = os.path.join(current_dir_path, "trimmed_data/trimmed_row", case, movie_number, "livedata.csv")
+    trimmed_video_mp4file_path = os.path.join(current_dir_path, "trimmed_data", case, movie_number, "fullstream.mp4")
+    trimmed_coord_csvfile_path = os.path.join(current_dir_path, "trimmed_data", case, movie_number, "livedata.csv")
 
     return trimmed_video_mp4file_path, trimmed_coord_csvfile_path
 
@@ -153,13 +152,22 @@ def trim_and_save_coord_as_csvfile(original_coord, trimmed_coord_save_path, star
 
 
 def main():
-    case = input("train or val or test ? ")
+    case = input("input case number; 0:nomal, 1:without_info, 2:with_info  ;")
+    if case == '0':
+        case = 'nomal'
+    elif case == '1':
+        case = 'without_info'
+    elif case == '2':
+        case = 'with_info'
+    else:
+        print('input error')
+        exit()
     movie_number = input("input movie number ")
 
     # トリミングする始点・終点の指定(s)
     fps = 25
-    start_frame = fps * 10
-    stop_frame  = fps * 20
+    start_frame = fps * 46
+    stop_frame  = fps * 54
 
     row_mp4_path, row_json_path = load_row_data(case, movie_number)
     trimmed_video_mp4file_path, trimmed_coord_csvfile_path = create_trimmed_data(case, movie_number)
