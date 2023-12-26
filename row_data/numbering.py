@@ -40,6 +40,6 @@ def rename_subfolders_and_cleanup(root_folder, target_files):
         move_files_and_delete_segments(new_path, target_files)
 
 root_folder = 'recordings/'  # ルートフォルダのパス
-target_files = ['fullstream.mp4', 'livedata.json.gz']  # 移動するファイル
+target_files = ['fullstream.mp4', 'livedata.json.gz', 'livedata.json']  # 移動するファイル
 
 rename_subfolders_and_cleanup(root_folder, target_files)

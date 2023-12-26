@@ -15,6 +15,7 @@ row-data
     │   │   └── 1
     │   │       ├── (省略)
     │   │       ├── fullstream.mp4
+    │   │       ├── livedata.json
     │   │       ├── livedata.json.gz
     │   │       ├── (省略)
     │   └── (省略)
@@ -29,12 +30,14 @@ row-data
 
 ```
 
-└── recordings
+recordings
 ├── 1
 │ ├── fullstream.mp4
+│ ├── livedata.json
 │ └── livedata.json.gz
 ├── 2
 │ ├── fullstream.mp4
+│ ├── livedata.json
 │ └── livedata.json.gz
 (省略)
 
