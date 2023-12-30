@@ -4,7 +4,7 @@
 
 ## 使い方
 
-### データセットの作成
-
-1. `data` ディレクトリに`recordings`データを配置します。
-2. `original-data/numbering.py` を実行します。
+0. `data` ディレクトリに`recordings`データを配置
+1. `/row_data`・・・ディレクトリの名前・構成の整理について
+2. `/trimmed_data`・・・データのトリミングについて
+3. `/combined_data`・・・データの結合について
