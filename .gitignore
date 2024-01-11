@@ -2,3 +2,6 @@
 *.json
 *.json.gz
 *.csv
+
+object_detection_data/env
+object_detection_data/YOLOX
