@@ -8,7 +8,7 @@
 
 ```
 trimmed_data
-  ├── nomal
+  ├── normal
   |   ├── 1
   |   │   ├── fullstream.mp4
   |   │   └── livedata.json
@@ -42,7 +42,7 @@ trimmed_data
 ```
 
 combined_data
-  ├── nomal
+  ├── normal
   |   ├── fullstream.mp4
   |   └── livedata.json
   ├── with_info
