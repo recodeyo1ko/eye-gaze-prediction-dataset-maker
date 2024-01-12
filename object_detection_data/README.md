@@ -1,12 +1,10 @@
-# diff_data
+# object_detection_data
 
-- 白黒動画から差分動画を作成する
+- カラー動画に対して物体検出を行い、物体検出結果を出力します。
 
 ## 使い方
 
 - combined_data ディレクトリに、結合済みのデータを配置する。
-- 仮想環境構築後、`sh environments.sh`を実行すると、必要なライブラリがインストールされます。(venv.md 参照)
-- `python3 object_detection.py -m yolox_s.onnx -s 0.3 --input_shape 640,640`を実行すると、`object_detection_data`ディレクトリの各ディレクトリに、動画と csv が出力されます。
 
 ```
 
@@ -29,7 +27,9 @@ combined_data
 
 ```
 
-↓
+- 仮想環境構築後、`sh environments.sh`を実行すると、必要なライブラリがインストールされます。(venv.md 参照)
+- `python3 object_detection.py -m yolox_s.onnx -s 0.3 --input_shape 640,640`を実行すると、`object_detection_data`ディレクトリの各ディレクトリに、動画と csv が出力されます。
+  ↓
 
 ```
 
