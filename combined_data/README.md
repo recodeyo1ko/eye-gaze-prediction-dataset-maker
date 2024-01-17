@@ -53,3 +53,5 @@ combined_data
       └── livedata.json
 
 ```
+
+- 必要に応じて、trimmed_data を２つに分割し、出力される normal を normal_train と normal_val に分割してください。

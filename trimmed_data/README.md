@@ -5,7 +5,7 @@
 
 ## 使い方
 
-- row-data /`nomal`,`with_info`,`without_info`に、それぞれのデータを配置する。
+- row-data `nomal`,`with_info`,`without_info`に、それぞれのデータを配置する。
 
 ```
 row_data
@@ -35,7 +35,8 @@ row_data
       ├── ...
 ```
 
-- `numbering.py`を実行すると、`trimmed_data`ディレクトリの`nomal`,`with_info`,`without_info`ディレクトリにトリミング後のデータが配置されます。
+- `row_dara`を実際に確認し、トリミングしたい範囲を決め、`video_coord_trim.py`の`start_frame`と`end_frame`に指定します。
+- `video_coord_trim.py`を実行すると、`trimmed_data`ディレクトリの`nomal`,`with_info`,`without_info`ディレクトリにトリミング後のデータが配置されます。
 
 ↓
 
