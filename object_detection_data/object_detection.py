@@ -120,7 +120,7 @@ def infe_video(args,input_shape): ###
             ort_inputs = {session.get_inputs()[0].name: img[None, :, :, :]}
             output = session.run(None, ort_inputs)
             predictions = demo_postprocess(output[0], input_shape, p6=args.with_p6)[0]
-            logging.info(f'Infer time: {time.time()-start:.4f} [s]')
+            # logging.info(f'Infer time: {time.time()-start:.4f} [s]')
             
             result_img, final_box, final_score, final_cls_ind =visual(origin_img, predictions, ratio, args) #############################################            
 
