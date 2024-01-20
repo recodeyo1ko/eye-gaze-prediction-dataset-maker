@@ -5,7 +5,7 @@
 ## 使い方
 
 - 取得データ（`recordings`）を、`row-data`ディレクトリに配置する。
-- json.gz は手動で展開する。（numbering.py の実行前でも後でも OK）
+- json.gz は手動で展開する。
 
 ```
 row-data
